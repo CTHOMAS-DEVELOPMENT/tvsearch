@@ -7,20 +7,28 @@
 The API setup
 
 A small Express.js application / Server that:
-(1) Implements a service. It accesses data cross site on starting it.
-(2) Serves the list of episodes to the front-end via a route
 
+(1) Implements a service. It accesses data cross site on starting it.
+
+(2) Serves the list of episodes to the front-end via a route.
+
+The Front end setup
 
 A front end application (Written using the Angular 4 framework) that:
-(1)Makes an API request to the api setup described above using a route to fetch the episodes
-(2)Displays the episodes (as thumbnail & title) in a grid
-(3)Has a text-box to enable to enable filtering of the episodes by title
-(4)Contains unit tests as appropriate, with the testing framework that comes with the default angular cli (See below)
+
+(1)Makes an API GET request to the api setup described above using a route to fetch the episodes.
+
+(2)Displays the episodes (as thumbnail & title) in a grid.
+
+(3)Has a text-box to enable filtering of the episodes by title.
+
+(4)Contains unit tests as appropriate, with the testing framework that comes with the default angular cli (See below).
 
 View the demo at http://chasbeen.frih.net/tvshedual
-NB: The above demo is only that and a full install of the two modules above should be undertaken to view the whole application working as it should (npm install in both directories. Please see below for correct operation of the front end application)
 
-# Tv Schedual
+NB: The above demo is only that and a full install of the two modules above should be undertaken to view the whole application working as it should (npm install in both root directories. Please see below for correct operation of the front end application)
+
+# Tv Schedual -Building, Testing and Deploying the front end application.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.0.
 
@@ -46,4 +54,4 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 ## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+(https://github.com/angular/angular-cli/blob/master/README.md).
