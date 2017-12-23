@@ -1,4 +1,26 @@
-# Tvshedual
+
+## TV Schedualer
+
+
+## This application has two modules that require setup.
+
+The API setup
+
+A small Express.js application / Server that:
+(1) Implements a service. It accesses data cross site on starting it.
+(2) Serves the list of episodes to the front-end via a route
+
+
+A front end application (Written using the Angular 4 framework) that:
+(1)Makes an API request to the api setup described above using a route to fetch the episodes
+(2)Displays the episodes (as thumbnail & title) in a grid
+(3)Has a text-box to enable to enable filtering of the episodes by title
+(4)Contains unit tests as appropriate, with the testing framework that comes with the default angular cli (See below)
+
+View the demo at http://chasbeen.frih.net/tvshedual
+NB: The above demo is only that and a full install of the two modules above should be undertaken to view the whole application working as it should (npm install in both directories. Please see below for correct operation of the front end application)
+
+# Tv Schedual
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.0.
 
