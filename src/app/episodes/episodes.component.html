@@ -1,0 +1,68 @@
+<div class='panel panel-primary'>
+  <div class='panel-heading'>
+      <H4>{{pageTitle}}</H4>
+  </div>
+  <div class='panel-body'>
+      <div>
+        <form class="form-inline">
+          <div class="form-group">
+	          <label for="typename">Filter by:</label>
+	          <input type="text" id="typename" [ngModelOptions]="{standalone: true}" class="form-control" [(ngModel)]='title' placeholder="Title Name"/>
+              
+              <select type="text" id="selectseries" [ngModelOptions]="{standalone: true}" class="form-control" [(ngModel)]='listFilter' >
+                <option value="">All Episodes</option>
+		          <option *ngFor='let season of seasonArray' value="{{ season }}">Series {{ season }}</option>
+            </select>
+            &nbsp;
+            <button class='btn btn-primary'
+            (click)='toggleImage()'>
+            {{showImage? 'Hide' : 'Show'}} Image
+            </button>
+            &nbsp;
+            <button class='btn btn-primary'
+          (click)='toggleSummary()'>
+          {{showSummary? 'Hide' : 'Show'}} Summary
+          </button>
+          </div>
+        </form>
+      </div>
+      <div class='table-responsive'>
+          <table class='table'  *ngIf='episodes && episodes.length'>
+              <tbody >
+                  <tr *ngFor='let episode of filteredEpisodes'>
+                    <td>
+                      <table>
+                        <tr>
+                          <td>
+                          <img *ngIf='showImage'
+                          [src]='episode.image.medium'
+                          [title]='episode.name | uppercase'
+                          [style.width.px]='imageWidth'
+                          [style.margin.px]='imageMargin'
+                          [style.padding-right.px]='imageRightPadding'
+                          >
+                          </td>
+                    
+                          <td>
+                            <ul>
+                              <li><span>Episode Title: </span><a href="{{ episode.url }}">{{ episode.name }}</a></li>
+                              <li><span>Number: </span>{{ episode.season}} / {{ episode.number}}</li>
+                              <li><span>Show Time: </span>{{ episode.airdate| date:'fullDate' }} : {{ episode.airtime }}</li>
+                            </ul>
+                          </td>
+                        </tr>
+                        <tr *ngIf='showSummary'>
+                          <td colspan=2>
+                              <span>Summary: </span><p>{{ episode.summary }}</p>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+    </div>
+  </div>
+</div>
+      
