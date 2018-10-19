@@ -24,8 +24,6 @@ A front end application (Written using the Angular 4 framework) that:
 
 (4)Contains unit tests as appropriate, with the testing framework that comes with the default angular cli (See below).
 
-View the demo at http://chasbeen.frih.net/tvshedual
-
 NB: The above demo is only that and a full install of the two modules above should be undertaken to view the whole application working as it should (npm install in both root directories. Please see below for correct operation of the front end application)
 
 # Tv Schedual -Building, Testing and Deploying the front end application.
